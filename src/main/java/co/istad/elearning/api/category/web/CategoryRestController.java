@@ -27,7 +27,14 @@ public class CategoryRestController {
     }
     @GetMapping
     public BaseRest<?> findAll(){
-        return null;
+
+        return BaseRest.builder()
+                .status(true)
+                .code(HttpStatus.OK.value())
+                .message("Category has been find all")
+                .data(null)
+                .timestamp(LocalDateTime.now())
+                .build();
     }
 
 
